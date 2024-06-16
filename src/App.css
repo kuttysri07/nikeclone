@@ -1,8 +1,44 @@
-.cardcontainer{
-  display:flex;
+/* Card container styling */
+.cardcontainer {
+  display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   width: 100vw;
+  flex-wrap: wrap; /* Allow wrapping of cards for smaller screens */
+  padding: 10px; /* Add some padding to ensure content is not touching the edges */
+}
 
+/* Card styling */
+.card {
+  /* Add any specific styles for your card elements here */
+  margin: 10px; /* Add margin between cards */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .cardcontainer {
+    height: auto;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cardcontainer {
+    padding: 15px;
+  }
+
+  .card {
+    width: 90%; /* Ensure cards take up most of the width on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .cardcontainer {
+    padding: 10px;
+  }
+
+  .card {
+    width: 100%; /* Ensure cards take up full width on very small screens */
+  }
 }
